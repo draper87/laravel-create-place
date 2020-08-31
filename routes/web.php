@@ -17,28 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/students', function () {
-
-    $students = [
-      [
-        'nome' => 'Oliver',
-        'cognome' => 'Benoit',
-        'voto' => '10'
-      ],
-      [
-        'nome' => 'Maria',
-        'cognome' => 'Rossi',
-        'voto' => '8'
-      ],
-      [
-        'nome' => 'Francesco',
-        'cognome' => 'Bianchi',
-        'voto' => '6'
-      ]
-    ];
-
-    return view('students', [
-      'teacher' => 'Alessandro Scolozzi',
-      'students' => $students,
-    ]);
-});
+Route::get('/students', 'StudentController@index');
