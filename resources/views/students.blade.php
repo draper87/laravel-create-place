@@ -4,9 +4,9 @@
 
 <h2>Studenti:</h2>
 @foreach ($students as $student)
-  <ul>
+<ul>
     <li>Nome {{ $student['nome'] }}</li>
     <li>Cognome {{ $student['cognome']}}</li>
     <li>Voto {{ $student['voto']}}</li>
-  </ul>
+</ul>
 @endforeach

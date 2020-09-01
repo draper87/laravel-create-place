@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Student; // aggiungo il model per fare funzionare la connessione al database
 
@@ -11,13 +12,9 @@ class StudentController extends Controller
 
       $students = Student::all();
 
-      return view('students', [
-        'teacher' => 'Alessandro Scolozzi',
-        'students' => $students,
+      return response()->json([
+        'students' => $students
       ]);
-    }
 
-    public function handlebars() {
-      return view('students-handlebars');
     }
 }

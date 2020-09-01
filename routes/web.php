@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/students', 'StudentController@index');
+
+Route::get('/students-handlebars', 'StudentController@handlebars');
